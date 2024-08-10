@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Muli:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #3a3f58; /* A modern, neutral color */
+  color: #f5f5f5; /* Soft white for text */
+  font-family: 'Muli', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.container {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 30px 50px;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px); /* Adds a glass effect */
+}
+
+.container h1 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-weight: 700; /* Bold heading */
+}
+
+.container a {
+  text-decoration: none;
+  color: #82b1ff;
+  transition: color 0.3s;
+}
+
+.container a:hover {
+  color: #b3e5fc;
+}
+
+.btn {
+  cursor: pointer;
+  display: inline-block;
+  width: 100%;
+  background: #82b1ff;
+  color: #3a3f58;
+  padding: 15px;
+  font-family: inherit;
+  font-size: 16px;
+  border: 0;
+  border-radius: 5px;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.btn:hover {
+  background: #b3e5fc;
+}
+
+.btn:focus {
+  outline: 0;
+}
+
+.btn:active {
+  transform: scale(0.95);
+}
+
+.text {
+  margin-top: 30px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.form-control {
+  position: relative;
+  margin: 20px 0 40px;
+  width: 320px;
+}
+
+.form-control input {
+  background-color: transparent;
+  border: 0;
+  border-bottom: 2px solid #fff;
+  display: block;
+  width: 100%;
+  padding: 15px 0;
+  font-size: 18px;
+  color: #fff;
+  transition: border-color 0.3s;
+}
+
+.form-control input:focus,
+.form-control input:valid {
+  outline: 0;
+  border-bottom-color: #82b1ff;
+}
+
+.form-control label {
+  position: absolute;
+  top: 15px;
+  left: 0;
+  pointer-events: none;
+}
+
+.form-control label span {
+  display: inline-block;
+  font-size: 18px;
+  min-width: 5px;
+  transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.form-control input:focus + label span,
+.form-control input:valid + label span {
+  color: #82b1ff;
+  transform: translateY(-30px);
+}
